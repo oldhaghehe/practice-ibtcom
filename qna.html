@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBTCOM - Вопросы и ответы</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.ibtcom.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img\logo.svg" alt="IBTCOM Logo" class="logo">
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="telephony.html">Телефония</a></li>
+                    <li><a href="software.html">Программное обеспечение</a></li>
+                    <li><a href="hardware.html">Аппаратное обеспечение</a></li>
+                    <li><a href="partners.html">Партнеры</a></li>
+                    <li><a href="qna.html">Вопросы</a></li>
+                    <button id="orderCallBtn">Заказать звонок</button> <!-- Кнопка для заказа звонка -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Часто задаваемые вопросы</h2>
+            <div class="qna-item">
+                <h3>Работаете ли вы с частными лицами?</h3>
+                <p>К сожалению, мы работаем только с юридическими лицами.</p>
+            </div>
+            <div class="qna-item">
+                <h3>Занимаетесь ли вы спутниковой связью?</h3>
+                <p>Да, мы готовы предложить любые отраслевые решения, вплоть до организации магистральных каналов.</p>
+            </div>
+            <div class="qna-item">
+                <h3>Какие формы оплаты принимаете?</h3>
+                <p>Мы принимаем к оплате только безналичный расчёт.</p>
+            </div>
+            <div class="qna-item">
+                <h3>Как долго вы работаете?</h3>
+                <p>Организация работает на рынке информационных технологий более 5 лет.</p>
+            </div>
+            <div class="qna-item">
+                <h3>Как долго действуют тарифы, которые вы предлагаете?</h3>
+                <p>У тарифных планов нет сроков действия. Согласно законодательству сотовый оператор не может менять условия тарифного плана, на который вы уже подключились ранее.</p>
+            </div>
+            <div class="qna-item">
+                <h3>Бывало ли, что клиенты жаловались на качество ваших работ?</h3>
+                <p>Нет. Были замечания по графику работы. Но это выбор нашей компании. Мы стараемся уважать личную жизнь наших клиентов и сотрудников, и поэтому работаем только с 9:00 до 18:00.</p>
+            </div>
+            <div class="qna-item">
+                <h3>Что необходимо для перехода на новые тарифы телефонии?</h3>
+                <p>Для организаций достаточно прислать заявку на адрес электронной почты со своими реквизитами и информацией о имеющихся абонентах (номера, операторы, затраты, ФИО абонентов).</p>
+            </div>
+            <button id="openQuestionModal">Задать вопрос</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2010-2025, ООО «Компания Инновационных Бизнес Технологий». Все права защищены.</p>
+            <p>+7 (3822) 97-79-97 | ibtcom@ibtcom.ru</p>
+            <div class="social_ic">
+                <div class="social telegram">
+                    <a href="https://t.me/ibtcom" target="_blank">
+                    <i class="fa fa-paper-plane fa-2x"></i>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <div id="orderCallModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Оставьте заявку</h2>
+            <p>И наши менеджеры свяжутся с вами в ближайшее время</p>
+            <form id="orderCallForm">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"  placeholder="Введите ваш e-mail" required>
+
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a>
+                </label>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div id="myModal2" class="reveal-modal">
+        <h2>Задайте свой вопрос<h2>
+
+                <p>И наши менеджеры свяжутся с вами в ближайшее время</p>
+                <form action="/wp-content/themes/ibtcom/mail.php" method="post" id="questionForm">
+                    <div class="left-column">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+                    </div>
+                    <div class="right-column">
+                        <label for="question">Вопрос:</label>
+                        <textarea id="question" name="comment" placeholder="Введите ваш вопрос" required></textarea>
+                    </div>
+                    <label>
+                        <input type="checkbox" name="consent" required>
+                        Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a>
+                    </label>
+                    <button type="submit">Отправить вопрос</button>
+                    <input type="hidden" name="forma" value="Вопрос">
+                </form>
+                <a class="close-reveal-modal"><img src="img/close.png" alt="" /></a>
+    </div>
+    <div id="myModal3" class="reveal-modal">
+        <div class="title">
+            <p>Спасибо<br> за Вашу заявку!</p>
+            Мы скоро свяжемся с Вами!
+        </div>
+        <a class="close-reveal-modal"><img src="/wp-content/themes/ibtcom/img/close.png" alt="" /></a>
+    </div>
+
+    
+
+</body>
+</html>

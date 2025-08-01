@@ -1,0 +1,729 @@
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-image: url("img/bg.jpg");
+    color: #333;
+    background-size: 200%;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header & Navigation */
+header {
+    background: #fff;
+    color: #333;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #007bff;
+    
+}
+nav ul li a:hover {
+    background-color: #FF6347; /* Более светлый оранжевый при наведении */
+    border-radius: 4px;
+    
+}
+header nav ul li:last-child {
+    margin-right: 0;        /* Убираем отступ у последнего элемента */
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: #333;
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
+
+
+/* Main Content */
+main {
+    padding: 2rem 0;
+}
+
+h1, h3 {
+    color: #0056b3;
+    
+}
+h2 {
+    color:#034387;
+    text-align: center;
+}
+.hero {
+    background-color:#007C9F;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100%;
+    
+}
+
+.hero h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-index {
+    position: relative;
+    width: 289px;
+    height: 381px;
+    float: left;
+    border-radius: 22px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Вертикальное выравнивание контента */
+    align-items: center;       /* Горизонтальное выравнивание контента */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавляем transition для плавности */
+}
+
+.card-index:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.card-index img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 22px;
+    z-index: 1;
+}
+
+.card-index h3 {
+    position: relative;
+    z-index: 2;
+    
+    background-color: #007C9F;
+    
+    color:#fff;
+    text-align: center;
+}
+
+
+
+/*карточки остальны*/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 280px; /* гибкий размер с минимумом 280px */
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.card h3 {
+    font-size: 1.1em;
+    color: #222;
+    margin: 0;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+
+
+.ibtcom-section {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 24px 12px;
+}
+
+.ibtcom-section h2 {
+    text-align: center;
+    color: #007C9F;
+    font-size: 2em;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center; /* Выравнивание по центру */
+}
+
+.icon-card {
+    flex: 1 1 calc(25% - 24px); /* 4 карточки в ряд с учётом зазора */
+    max-width: calc(25% - 24px);
+    text-align: center;
+    background: transparent; /* Без фона */
+    box-shadow: none; /* Без теней */
+    border: none; /* Без рамок */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+    border-radius: 0; /* Без скруглений */
+}
+
+.icon-card h3 {
+    font-size: 1.1em;
+    color: #007C9F;
+    line-height: 1.35;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .icon-card {
+        flex: 1 1 calc(50% - 24px); /* 2 в ряд для средних экранов */
+        max-width: calc(50% - 24px);
+    }
+}
+
+@media (max-width: 500px) {
+    .icon-card {
+        flex: 1 1 100%; /* 1 в ряд на узких экранах */
+        max-width: 100%;
+    }
+}
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+
+/* Q&A Section */
+.qna-item {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #007bff;
+    border-left: 4px solid #007bff;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none; /* Hidden by default on mobile */
+    }
+
+    nav ul.active {
+        display: flex; /* Show when active */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+/*модальное Заказать звонок*/
+/* Общие стили для модального окна */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed; /* Фиксированное позиционирование, чтобы оставалось на экране при прокрутке */
+    z-index: 10; /* Размещаем поверх других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Занимает всю ширину экрана */
+    height: 100%; /* Занимает всю высоту экрана */
+    overflow: auto; /* Добавляем полосу прокрутки, если контент не помещается */
+    background-color: rgba(0, 0, 0, 0.4); /* Полупрозрачный фон */
+    color: rgb(172, 25, 25);
+}
+
+/* Стили для содержимого модального окна */
+.modal-content {
+    background-color: #ffffff;
+    margin: 15% auto; /* Центрируем по вертикали и горизонтали */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина содержимого модального окна */
+    max-width: 600px; /* Максимальная ширина */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Стили для кнопки закрытия */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стили для формы */
+#orderCallForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#orderCallForm label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+#orderCallForm h2 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #3c3c3c;
+}
+
+#orderCallForm input[type="text"],
+#orderCallForm input[type="tel"],
+#orderCallForm input[type="email"] {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#orderCallForm input[type="checkbox"] {
+    margin-top: 10px;
+}
+
+#orderCallForm label[for="consent"] {
+    display: flex;
+    align-items: center;
+}
+
+#orderCallForm label[for="consent"] input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#orderCallForm button[type="submit"],
+#myModal2 button[type="submit"]  {
+    background-color: #FF8C00;
+    color: white;
+    padding: 12px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#orderCallForm button[type="submit"]:hover,
+#myModal2 button[type="submit"]:hover {
+    background-color: #FF6347;
+}
+
+/* Стили для заголовка и параграфа */
+.modal-content h2 {
+    text-align: center;
+    color: #333;
+}
+
+.modal-content p,
+.reveal-modal p,
+.reveal-modal h2 {
+    text-align: center;
+    color: #3c3c3c;
+    margin-bottom: 20px;
+}
+
+/* Дополнительные стили (например, для адаптивности) */
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
+
+    .reveal-modal {
+        display: none; /* Скрываем по умолчанию */
+        position: fixed;
+        z-index: 100;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Центрирование */
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        width: 80%;
+        max-width: 600px;
+    }
+
+    .reveal-modal .title p {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .close-reveal-modal {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .close-reveal-modal img {
+        width: 20px;
+    }
+
+
+/* Общий контейнер для контента (кроме хедера и футера) */
+.content-container {
+    max-width: 960px; /* Примерная максимальная ширина контента на сайте */
+    margin: 20px auto; /* Отступы сверху и снизу и центрирование по горизонтали */
+    padding: 0 20px; /* Отступы слева и справа */
+    color: #000000;
+}
+
+
+
+
+/* Разделители */
+hr {
+    border: 1px solid #ccc;
+    margin: 2em 0;
+}
+
+.wp-block-heading {
+    text-align: justify;
+}
+
+/* Дополнительные стили (если необходимо) */
+/* Например, чтобы переопределить стили из других файлов CSS */
+#text-1,
+#text-2 {
+    text-align: justify;  
+    color: #000000; 
+}
+
+
+
+.orderCallButton,
+#orderCallBtn,
+#openQuestionModal {
+    background-color: #FF8C00; /* Насыщенный оранжевый */
+    color: #fff; /* Белый текст */
+    padding: 12px 24px; /* Увеличенный отступ для большего размера */
+    font-size: 14px; /* Увеличиваем размер шрифта */
+    font-weight: bold; /* Жирный текст */
+    border: none; /* Убираем границу */
+    border-radius: 8px; /* Скругленные углы */
+    cursor: pointer; /* Меняем курсор на руку при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета фона */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для глубины */
+    text-transform: uppercase; /* Текст в верхнем регистре */
+    letter-spacing: 0.5px; /* Небольшое увеличение межбуквенного расстояния */
+    margin-left: auto;
+}
+
+.orderCallButton:hover,
+#orderCallBtn:hover,
+#openQuestionModal:hover {
+    background-color: #FF6347; /* Более светлый оранжевый при наведении */
+}
+
+.orderCallButton:active,
+#orderCallBtn:active,
+#openQuestionModal:active {
+    background-color: #E67300; /* Более темный оранжевый при нажатии */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Уменьшаем тень при нажатии */
+    transform: translateY(1px); /* Небольшое смещение вниз при нажатии */
+}
+.card img {
+    width: 100px;      /* Задайте нужную ширину изображения */
+    height: auto;      /* Автоматическая высота для сохранения пропорций */
+    margin-bottom: 10px; /* Добавляем отступ между изображением и текстом */
+    display: block;       /* Превращаем в блочный элемент для центрирования */
+    margin-left: auto;    /* Центрируем по горизонтали */
+    margin-right: auto;   /* Центрируем по горизонтали */
+}
+
+.container-partners img {
+    width: 95%;          /* Ширина изображения */
+    display: block;      /* Превращаем в блочный элемент */
+    margin-left: auto;   /* Автоматический отступ слева */
+    margin-right: auto;  /* Автоматический отступ справа */
+    position: relative; 
+}
+
+
+.telephony-card {
+    background-color: #1789bb;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 280px; /* гибкий размер с минимумом 280px */
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    color: white;
+    text-align: center;
+    
+}
+.telephony-card h3 {
+    color: white;
+    font-size: 38px;
+    
+}
+
+.icons-t {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.icon-card-t {
+    font-size: 14px;
+    width: 175px;          
+    text-align: center;     
+    margin-bottom: 20px;    
+}
+.icon-card-t h3 {
+    color: #007C9F;    
+}
+.arrow {
+
+    width: 80px;           
+    height: auto;          
+    margin-top: 50px;    
+}
+.arrow img {
+    width: 100%;
+
+    height: auto; 
+    vertical-align: middle; 
+}
+
+.social_ic {
+    display: flex;          /* Размещаем иконки в ряд */
+    justify-content: center; /* Центрируем иконки по горизонтали */
+    margin-top: 10px;      /* Добавляем отступ сверху */
+}
+
+.social {
+    margin: 0 10px;       /* Отступы между иконками */
+}
+
+.social.telegram a {
+    color: #2AABEE;      /* Цвет Telegram (голубой) */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+}
+
+.social.telegram a:hover {
+    color: #1A8ECE;      /* Более темный оттенок при наведении */
+}
+
+.social.telegram i {
+    font-size: 2em;       /* Размер иконки */
+}
+.reveal-modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed;
+    z-index: 1050; /* Больше, чем у других модальных окон */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px; /* Ограничиваем ширину */
+    text-align: center; /* Центрируем текст */
+}
+
+.reveal-modal .title {
+    margin-bottom: 20px;
+}
+
+.reveal-modal .title p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.close-reveal-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.close-reveal-modal img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Адаптивные стили (при необходимости) */
+@media (max-width: 600px) {
+    .reveal-modal {
+        width: 95%;
+    }
+}
+
+
+
+#myModal2 {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reveal-modal h2 {
+    color: #3c3c3c;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.reveal-modal p {
+    color: #3c3c3c;
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+}
+
+.left-column,
+.right-column {
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+
+.left-column {
+    width: 45%;
+}
+
+.right-column {
+    width: 50%;
+}
+
+#myModal2 label {
+    color: #3c3c3c;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: calc(100% - 12px);
+    padding: 6px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc; 
+}
+
+
+
+

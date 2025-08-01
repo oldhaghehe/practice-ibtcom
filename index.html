@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBTCOM - Инновационные Бизнес Технологии</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.ibtcom.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="index-body">
+    <header>
+        <div class="container">
+            <img src="img\logo.svg" alt="IBTCOM Logo" class="logo">
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="telephony.html">Телефония</a></li>
+                    <li><a href="software.html">Программное обеспечение</a></li>
+                    <li><a href="hardware.html">Аппаратное обеспечение</a></li>
+                    <li><a href="partners.html">Партнеры</a></li>
+                    <li><a href="qna.html">Вопросы</a></li>
+                    <button id="orderCallBtn">Заказать звонок</button> <!-- Кнопка для заказа звонка -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main>
+        
+        <section class="hero">
+            <div class="container">
+                <h1>ОПТИМИЗИРУЕМ И СОКРАТИМ ВАШИ ЗАТРАТЫ</h1>
+                <p>Инновационные решения для вашего бизнеса</p>
+            </div>
+        </section>
+        <br>
+       
+
+
+        <section class="container card-container">
+            <a href="telephony.html" class="card-index">
+                <img src="img\zatraty_na_sotovy.jpg" alt="Телефония">
+                <h3>Сократим затраты на сотовую связь</h3>
+            </a>
+            <a href="software.html" class="card-index">
+                <img src="img\po.jpg" alt="Программное обеспечение">
+                <h3>Подберем и оптимизируем программное обеспечение</h3>
+            </a>
+            <a href="hardware.html" class="card-index">
+                <img src="img\hw.jpg" alt="Аппаратное обеспечение">
+                <h3>Подберем и установим аппаратное обеспечение</h3>
+            </a>
+        </section>
+
+        <section class="ibtcom-section">
+            <h2>IBTCOM это</h2>
+            <div class="icons">
+                <div class="icon-card">
+                    <img src="img\first-icon.png" alt="Описание 1" />
+                    <h3>Высококвалифицированная<br /> помощь при выборе<br /> программного обеспечения</h3>
+                </div>
+                <div class="icon-card">
+                    <img src="img\second-icon.png" alt="Описание 2" />
+                    <h3>Работа напрямую<br /> с крупнейшими<br /> дистрибьюторами<br /> и ресселерами ПО</h3>
+                </div>
+                <div class="icon-card">
+                    <img src="img\third-icon.png" alt="Описание 3" />
+                    <h3>Продажа<br /> специализированного ПО</h3>
+                </div>
+                <div class="icon-card">
+                    <img src="img\fourth-icon.png" alt="Описание 4" />
+                    <h3>Формирование<br /> пакета программ<br /> в зависимости<br /> от функции сотрудника</h3>
+                </div>
+            </div>
+        </section>
+        
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2010-2025, ООО «Компания Инновационных Бизнес Технологий». Все права защищены.</p>
+            <p>+7 (3822) 97-79-97 | ibtcom@ibtcom.ru</p>
+            <div class="social_ic">
+                <div class="social telegram">
+                    <a href="https://t.me/ibtcom" target="_blank">
+                    <i class="fa fa-paper-plane fa-2x"></i>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </footer>
+    <div id="orderCallModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModalBtn">&times;</span>
+                <h2>Оставьте заявку</h2>
+                <p>И наши менеджеры свяжутся с вами в ближайшее время</p>
+                <form id="orderCallForm">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label>
+                        <input type="checkbox" name="consent" required>
+                        Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a>
+                    </label>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+        <div id="myModal3" class="reveal-modal" style="top: 350px;">
+            <div class="title">
+	            <p>Спасибо<br> за Вашу заявку!</p>
+	                Мы скоро свяжемся с Вами!
+            </div>
+	        <a class="close-reveal-modal"><img src="/wp-content/themes/ibtcom/img/close.png" alt=""/></a>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

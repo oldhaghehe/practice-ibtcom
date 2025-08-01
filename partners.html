@@ -1,0 +1,136 @@
+<!--<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBTCOM - Партнеры</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.ibtcom.ru/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.svg" alt="IBTCOM Logo" class="logo">
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="telephony.html">Телефония</a></li>
+                    <li><a href="software.html">Программное обеспечение</a></li>
+                    <li><a href="hardware.html">Аппаратное обеспечение</a></li>
+                    <li><a href="partners.html">Партнеры</a></li>
+                    <li><a href="qna.html">Вопросы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Наши партнеры</h2>
+            <img src="partners.png" alt="Наши партнеры">
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2010-2025, ООО «Компания Инновационных Бизнес Технологий». Все права защищены.</p>
+            <p>+7 (3822) 97-79-97 | ibtcom@ibtcom.ru</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBTCOM - Партнеры</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.ibtcom.ru/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img\logo.svg" alt="IBTCOM Logo" class="logo">
+            <nav>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="telephony.html">Телефония</a></li>
+                    <li><a href="software.html">Программное обеспечение</a></li>
+                    <li><a href="hardware.html">Аппаратное обеспечение</a></li>
+                    <li><a href="partners.html">Партнеры</a></li>
+                    <li><a href="qna.html">Вопросы</a></li>
+                    <button id="orderCallBtn">Заказать звонок</button> <!-- Кнопка для заказа звонка -->
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container-partners">
+            <h2>Наши партнеры</h2>
+            <img src="img\partners.png" alt="Наши партнеры">
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2010-2025, ООО «Компания Инновационных Бизнес Технологий». Все права защищены.</p>
+            <p>+7 (3822) 97-79-97 | ibtcom@ibtcom.ru</p>
+            <div class="social_ic">
+                <div class="social telegram">
+                    <a href="https://t.me/ibtcom" target="_blank">
+                    <i class="fa fa-paper-plane fa-2x"></i>
+                    </a>
+                </div>
+             </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для формы заявки -->
+    <div id="orderCallModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Оставьте заявку</h2>
+            <p>И наши менеджеры свяжутся с вами в ближайшее время</p>
+            <form id="orderCallForm">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a>
+                </label>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+  
+
+</body>
+</html>
+
+
