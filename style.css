@@ -10,6 +10,9 @@ body {
     color: #333;
     background-size: 200%;
 }
+#body-pp {
+    background-image: none;
+}
 
 .container {
     width: 80%;
