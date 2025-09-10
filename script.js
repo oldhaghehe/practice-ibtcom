@@ -51,12 +51,15 @@ document.addEventListener('DOMContentLoaded', function() {
         if (event.target === modal) {
             modal.style.display = "none";
         }
+        if (event.target === myModal2) {
+            myModal2.style.display = "none";
+        }
     };
 
     //Модальное окно "Задать вопрос"
     const openQuestionModalBtn = document.getElementById('openQuestionModal');
     const myModal2 = document.getElementById('myModal2');
-    const closeQuestionModalBtn = myModal2.querySelector('.close-reveal-modal');
+    const closeQuestionModalBtn = document.getElementById('closeModalBtn2');
     const questionForm = document.getElementById('questionForm');
     const modalThanks = document.getElementById('myModal3'); //Окно благодарности
     // Открыть окно
