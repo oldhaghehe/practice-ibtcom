@@ -111,24 +111,23 @@
 
                 <p>И наши менеджеры свяжутся с вами в ближайшее время</p>
                 <form action="/wp-content/themes/ibtcom/mail.php" method="post" id="questionForm">
-                    <div class="left-column">
-                        <label for="name">Имя:</label>
-                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
 
-                        <label for="phone">Телефон:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Введите ваш номер телефона" required>
 
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
-                    </div>
-                    <div class="right-column">
-                        <label for="question">Вопрос:</label>
-                        <textarea id="question" name="comment" placeholder="Введите ваш вопрос" required></textarea>
-                    </div>
-                    <label>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Введите ваш e-mail" required>
+
+                    <label for="question">Вопрос:</label>
+                    <textarea id="question" name="comment" placeholder="Введите ваш вопрос" required></textarea>
+
+                    <div class="consent-container">
                         <input type="checkbox" name="consent" required>
-                        Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a>
-                    </label>
+                        <label>Я согласен с <a href="privacy-policy.html">Политикой конфиденциальности</a></label>
+                    </div>
+
                     <button type="submit">Отправить вопрос</button>
                     <input type="hidden" name="forma" value="Вопрос">
                 </form>
